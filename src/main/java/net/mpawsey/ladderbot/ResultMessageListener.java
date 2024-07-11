@@ -18,8 +18,8 @@ public class ResultMessageListener extends AbstractMessageListener
 	private final int LADDER_PERM_BIT = 4;
 	private final String THUMBS_UP = "U+1f44d";
 	private final String THUMBS_DOWN = "U+1f44e";
-	private final long RAZ_UP = 656900685308362802l;
-	private final long RAZ_DOWN = 656900927558778880l;
+	private final long RAZ_UP = 613030346589601869l;
+	private final long RAZ_DOWN = 711681290146938991l;
 	
 	private Timer timerFromStart, timerFromValid;
 	private Result result;

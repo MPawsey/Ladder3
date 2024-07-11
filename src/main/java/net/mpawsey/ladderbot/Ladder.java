@@ -411,7 +411,7 @@ public class Ladder
 			if (guild.retrieveMemberById(player.getId()).complete() == null)
 				continue;
 			
-			PlayerMember pm = new PlayerMember(player, MessageHelper.getNameFromId(player.getId(), guild, true), guild.retrieveMemberById(player.getId()).complete().getUser().getAsTag()); 
+			PlayerMember pm = new PlayerMember(player, MessageHelper.getNameFromId(player.getId(), guild, true), guild.retrieveMemberById(player.getId()).complete().getUser().getName()); 
 			set.add(pm);
 			
 			if (pm.name.length() > longestName)
@@ -449,10 +449,10 @@ public class Ladder
 			++i;
 			
 			if (i == pm.player.getLastPosition() || pm.player.getLastPosition() == -1)
-				sb.append(" â†’   ");
+				sb.append(" →   ");
 			else if (i < pm.player.getLastPosition())
 			{
-				sb.append(" â†‘ ");
+				sb.append(" ↑ ");
 				int change = pm.player.getLastPosition() - i;
 				if (change < 10)
 					sb.append(' ');
@@ -460,7 +460,7 @@ public class Ladder
 			}
 			else
 			{
-				sb.append(" â†“ ");
+				sb.append(" ↓ ");
 				int change = i - pm.player.getLastPosition();
 				if (change < 10)
 					sb.append(' ');
